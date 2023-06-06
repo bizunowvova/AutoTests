@@ -1,6 +1,21 @@
 import java.util.StringJoiner;
 
 public class Person {
+    public static void main(String[] args) {
+        Person Alex = new Person("NeVova", "QA", "qa@mail.ru", "79180194538", 50000, 18);
+//        System.out.println(Alex);
+        Person[] persArray = new Person[5];
+        persArray[0] = new Person("Ivanov Ivan", "Engineer", "ivivan@mailbox.com", "892312312", 30000, 29);
+        persArray[1] = new Person("Engineer Ivan", "Engineer", "ivivan@mailbox.com", "892312312", 30000, 41);
+        persArray[2] = new Person("Ivanov Engineer", "Engineer", "ivivan@mailbox.com", "892312312", 30000, 50);
+        persArray[3] = new Person("mailbox Ivan", "Engineer", "ivivan@mailbox.com", "892312312", 30000, 30);
+        persArray[4] = new Person("Ivanov mailbox", "Engineer", "ivivan@mailbox.com", "892312312", 30000, 70);
+        for (int i = 0; i < 5; i++) {
+            if (persArray[i].age >= 30) {
+                System.out.println(persArray[i]);
+            }
+        }
+    }
         public String name;
         public String job;
         public String email;
@@ -27,10 +42,7 @@ public class Person {
             .add("age: " + age)
             .toString();
     }
-    public static void main(String[] args) {
-        Person Alex = new Person("NeVova", "QA", "qa@mail.ru", "79180194538", 50000, 18);
-        System.out.println(Alex);
-    }
+
 //    public String getJob () {
 //        return job;
 //    }
